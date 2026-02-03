@@ -5,7 +5,7 @@ import plotly.express as px
 st.set_page_config(layout="wide")
 
 
-df = pd.read_csv("C:\\Users\\ADMIN\\Downloads\\india.csv")
+df = pd.read_csv("india.csv")
 
 list_of_state = list(df['State'].unique())
 list_of_state.insert(0,'Overall India')
@@ -20,7 +20,7 @@ plot = st.sidebar.button('Plot graph')
 if plot:
     st.text('Size represent primary parameter')
     st.text('Colour represent secondary Parameter')
-    
+
     if selected_state == 'Overall India':
         fig = px.scatter_mapbox(
         df,
